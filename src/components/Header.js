@@ -21,7 +21,6 @@ class Header extends React.Component {
 
   render() {
     const opacity = 1 - (this.state.currentScrollHeight / 130);
-    console.log(opacity);
     let fadeStyle;
     if (opacity < 0) {
       fadeStyle = { color: 'rgba(85, 85, 85, 0)' }
@@ -30,7 +29,6 @@ class Header extends React.Component {
     }
     return(
       <header style={fadeStyle}>
-        {console.log(fadeStyle)}
         <p>
           Hi, I'm Isak Solheim, a <b>front-end
           developer</b> focused on creating <b>beautiful</b> and
