@@ -1,6 +1,9 @@
 nav {
   background-color: #1B1A35;
   height: 55px;
+  position: fixed;
+  top: 0;
+  width: 100%;
   
   ul {
     list-style-type: none;
