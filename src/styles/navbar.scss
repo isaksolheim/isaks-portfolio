@@ -1,0 +1,45 @@
+nav {
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: center;
+  ul {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .left {
+    float: left;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .center {
+    display: inline-block;
+    li {
+      margin-right: 30px;
+      color: #707070;
+    }
+    li:last-child {
+      margin: 0;
+    }
+  }
+
+  .right {
+    float: right;
+
+    li {
+      color: white;
+      background-color: #707070;
+      padding: 6px 15px;
+      margin-right: 10px;
+      font-weight: 300;
+      border-radius: 8px;
+    }
+  }
+}
+
