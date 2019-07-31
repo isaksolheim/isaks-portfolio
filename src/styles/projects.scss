@@ -10,8 +10,116 @@ section.projects {
     text-transform: uppercase;
   }
 
-  img {
-    display: block;
+  .project {
     width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    .hidden {
+      opacity: 0;
+      transition: 0.4s all;
+
+      h3 {
+        position: absolute;
+        width: 100%;
+        top: 3px;
+        font-size: 25px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .light {
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: #C0C0C0;
+      }
+
+      .technologies {
+        width: 90%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+        text-align: center;
+
+        li {
+          margin: 10px;
+          display: inline-block;
+          color: #333;
+          background-color: #f1f1f1;
+          padding: 5px 10px;
+          border-radius: 2px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, .2); 
+        }
+      }
+
+      .buttons {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .button {
+          box-shadow: 0 10px 30px rgba(0, 0, 0, .2); 
+          cursor: pointer;
+          display: inline-block;
+          margin: 10px;
+          background-color: white;
+          color: #333;
+          padding: 10px 12px;
+          border-radius: 2px;
+          font-weight: 600;
+          transition: 0.2s all;
+
+          a {
+            color: #333;
+            text-decoration: none;
+            transition: 0.2s all;
+          }
+        }
+
+        .button:hover {
+          background-color: #333;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .project:hover {
+    z-index: 2;
+    -webkit-transition: all 400ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 400ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 400ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 400ms ease-in;
+    transform: scale(1.05);
+
+    img {
+      filter: brightness(0.4);
+    }
+
+    .hidden {
+      opacity: 1;
+
+
+    }
   }
 }

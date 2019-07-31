@@ -1,4 +1,5 @@
 nav {
+  z-index: 999;
   transition: 0.7s all;
   background-color: #1B1A35;
   height: 55px;
@@ -6,6 +7,10 @@ nav {
   top: 0;
   width: 100%;
   color: #F4EB91;
+  a {
+    color: #F4EB91;
+    text-decoration: none;
+  }
   
   ul {
     list-style-type: none;
@@ -24,6 +29,34 @@ nav {
   .right {
     float: right;
     margin-right: 30px;
+  }
+
+  .links {
+    display: none;
+  }
+}
+
+nav.active {
+  .links {
+    display: block;
+    background-color: white;
+    color: #333;
+    margin-top: 55px;
+    padding: 0;
+    height: 201px;
+
+    a {
+      color: #333;
+    }
+
+    li {
+      text-align: center;
+      display: block;
+      margin: 20px;
+    }
+    li:first-child {
+      padding-top: 20px;
+    }
   }
 }
 
