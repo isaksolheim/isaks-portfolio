@@ -12,10 +12,20 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
   }
 
   handleScroll = () => {
     this.setState({ currentScrollHeight: window.scrollY });
+  }
+
+  handleResize = () => {
+    var navbar = document.getElementById('navbar');
+    var toggleIcon = document.getElementById('toggleIcon');
+    if (window.innerWidth >= 800) {
+      navbar.className = '';
+      toggleIcon.className = 'fas fa-bars'
+    }
   }
 
   handleToggle = () => {
