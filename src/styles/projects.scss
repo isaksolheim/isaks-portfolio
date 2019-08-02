@@ -102,39 +102,33 @@ section.projects {
   }
 
   .project:hover {
-    z-index: 2;
-    -webkit-transition: all 400ms ease-in;
-    -webkit-transform: scale(1.05);
-    -ms-transition: all 400ms ease-in;
-    -ms-transform: scale(1.05);   
-    -moz-transition: all 400ms ease-in;
-    -moz-transform: scale(1.05);
-    transition: all 400ms ease-in;
-    transform: scale(1.05);
-
     img {
       filter: brightness(0.4);
     }
 
     .hidden {
       opacity: 1;
-
-
     }
   }
+}
 
 
-  @include desktop {
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 260px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+@include desktop {
+  .projects-wrapper {
+    width: 100%;
+    background-color: white;
+    section.projects {
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 260px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
 
-    h1 {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      h1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
     }
   }
 }
