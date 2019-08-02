@@ -93,6 +93,14 @@ function Projects() {
             </div>
           </div>
         </div>
+        <a href="https://github.com/wickdeeb">
+          <div className="project">
+            <img src={'./images/projects/github.jpg'} alt="github" />
+            <div className="hidden">
+              <h3 id="center">MY GITHUB</h3>
+            </div>
+          </div>
+        </a>
       </section>
     </div>
   );

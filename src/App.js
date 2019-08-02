@@ -20,6 +20,7 @@ function App() {
             <Header />
             <Projects />
             <Skills />
+            <Contact />
           </div>
           } />
           <Route exact path="/contact" render={Contact} />

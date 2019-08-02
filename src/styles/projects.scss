@@ -28,6 +28,10 @@ section.projects {
         transform: translate(-50%, -50%);
       }
 
+      #center {
+        top: 40%;
+      }
+
       .light {
         width: 100%;
         position: absolute;
@@ -35,7 +39,7 @@ section.projects {
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
-        color: #C0C0C0;
+        color: #f1f1f1;
       }
 
       .technologies {
