@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -43,29 +43,65 @@ class Navbar extends React.Component {
 
   render() {
     let colorStyle;
+    let otherColorStyle;
     
     if (this.state.currentScrollHeight > 200) {
       colorStyle = {
         color: '#333',
         backgroundColor: '#ffffff'
-      }
+      };
+      otherColorStyle = {
+        color: '#333',
+      };
     } else {
-      colorStyle = {}
+      colorStyle = {};
+      otherColorStyle = {};
     }
 
     return(
       <nav id="navbar" style={colorStyle}>
         <ul className="left">
-          <li>isaks.io</li>
+          <Link
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-260}
+            duration={600}><li style={otherColorStyle}>isaks.io</li>
+          </Link>
         </ul>
         <ul className="right">
           <li><i id="toggleIcon" onClick={this.handleToggle} className="fas fa-bars"></i></li>
         </ul>
         <ul className="links">
-          <li><Link to="/">Projects</Link></li>
-          <li><Link to="/">Skills</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <Link 
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-25}
+            duration={600}
+            onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Projects</li>
+          </Link>
+          <Link 
+            activeClass="active"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-25}
+            duration={600}
+            onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Skills</li>
+          </Link>
+          <Link 
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-25}
+            duration={600}
+            onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Contact</li>
+          </Link>
+          <a href={'IsakSolheimCV.pdf'} download onClick={this.handleToggle}><li style={otherColorStyle}>Resume</li></a>
         </ul>
       </nav>
     );

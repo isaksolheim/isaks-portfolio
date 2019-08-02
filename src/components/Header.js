@@ -28,7 +28,7 @@ class Header extends React.Component {
       fadeStyle = { color: `rgba(85, 85, 85, ${opacity})` };
     }
     return(
-      <header style={fadeStyle}>
+      <header id="header" style={fadeStyle}>
         <p>
           Hi, I'm Isak Solheim, a <b>front-end
           developer</b> focused on creating <b>beautiful</b> and
