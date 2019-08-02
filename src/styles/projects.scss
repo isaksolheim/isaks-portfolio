@@ -6,7 +6,7 @@ section.projects {
   h1 {
     text-align: center;
     color: #333;
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
   }
 
@@ -22,8 +22,8 @@ section.projects {
       h3 {
         position: absolute;
         width: 100%;
-        top: 3px;
-        font-size: 25px;
+        top: 10px;
+        font-size: 30px;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -31,7 +31,7 @@ section.projects {
       .light {
         width: 100%;
         position: absolute;
-        top: 50px;
+        top: 70px;
         left: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
@@ -41,7 +41,7 @@ section.projects {
       .technologies {
         width: 90%;
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 0;
@@ -50,6 +50,7 @@ section.projects {
         text-align: center;
 
         li {
+          width: 120px;
           margin: 10px;
           display: inline-block;
           color: #333;
@@ -68,6 +69,7 @@ section.projects {
         transform: translate(-50%, -50%);
 
         .button {
+          width: 70px;
           box-shadow: 0 10px 30px rgba(0, 0, 0, .2); 
           cursor: pointer;
           display: inline-block;
