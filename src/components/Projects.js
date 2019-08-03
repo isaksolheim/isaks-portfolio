@@ -17,6 +17,16 @@ class Projects extends React.Component {
     this.setState({
       currentWidth: window.innerWidth
     });
+
+    if (window.innerWidth >= 800) {
+      var projects = document.getElementById('projects');
+      for (var i = 1; i < projects.children.length - 1; i++) {
+        if (projects.children[i].children[1].className === 'hidden visible') {
+          projects.children[i].children[1].className = 'hidden';
+          projects.children[i].children[0].className = '';
+        }
+      }
+    }
   }
 
   handleClick = (e) => {
@@ -34,7 +44,7 @@ class Projects extends React.Component {
   render() {
     return(
       <div className="projects-wrapper">
-        <section className="projects">
+        <section className="projects" id="projects">
           <h1>Projects</h1>
           <div className="project" onClick={this.handleClick}>
             <img src={'./images/projects/tromsopizzeria.jpg'} alt="tromsopizzeria" />

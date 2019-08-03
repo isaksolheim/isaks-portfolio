@@ -45,7 +45,7 @@ section.projects {
       .technologies {
         width: 90%;
         position: absolute;
-        top: 40%;
+        top: 44%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 0;
@@ -95,7 +95,6 @@ section.projects {
     }
 
     img {
-      border-radius: 2px;
       display: block;
       width: 100%;
       transition: 0.2s all;
@@ -126,6 +125,10 @@ section.projects {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
+
+      img {
+        border-radius: 2px;
+      }
 
       h1 {
         grid-column-start: 1;
