@@ -16,7 +16,7 @@ section.projects {
     text-align: center;
     color: white;
     .hidden {
-      opacity: 0;
+      display: none;
       transition: 0.4s all;
 
       h3 {
@@ -55,7 +55,7 @@ section.projects {
 
         li {
           width: 120px;
-          margin: 10px;
+          margin: 5px;
           display: inline-block;
           color: #333;
           background-color: #f1f1f1;
@@ -91,30 +91,22 @@ section.projects {
             transition: 0.2s all;
           }
         }
-
-        .button:hover {
-          background-color: #333;
-          a {
-            color: white;
-          }
-        }
       }
     }
 
     img {
+      border-radius: 2px;
       display: block;
       width: 100%;
+      transition: 0.2s all;
     }
-  }
 
-  .project:hover {
-    img {
+    img.dark {
       filter: brightness(0.4);
     }
-
-    .hidden {
-      opacity: 1;
-    }
+  }
+  .hidden.visible {
+    display: block;
   }
 }
 
@@ -138,6 +130,22 @@ section.projects {
       h1 {
         grid-column-start: 1;
         grid-column-end: 3;
+      }
+
+      .buttons {
+        .button:hover {
+          background-color: #333;
+          color: white;
+        }
+      }
+    }
+    .project:hover {
+      img {
+        filter: brightness(0.4);
+      }
+
+      .hidden {
+        display: block;
       }
     }
   }
