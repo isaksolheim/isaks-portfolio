@@ -75,6 +75,7 @@ class Navbar extends React.Component {
         </ul>
         <ul className="links">
           <Link 
+            href="#projects-header"
             activeClass="active"
             to="projects"
             spy={true}
@@ -84,6 +85,7 @@ class Navbar extends React.Component {
             onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Projects</li>
           </Link>
           <Link 
+            href="#skills-header"
             activeClass="active"
             to="skills"
             spy={true}
@@ -92,7 +94,8 @@ class Navbar extends React.Component {
             duration={600}
             onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Skills</li>
           </Link>
-          <Link 
+          <Link
+            href="#contact-header"
             activeClass="active"
             to="contact"
             spy={true}
@@ -101,7 +104,7 @@ class Navbar extends React.Component {
             duration={600}
             onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Contact</li>
           </Link>
-          <a href={'IsakSolheimCV.pdf'} download onClick={this.handleToggle}><li style={otherColorStyle}>Resume</li></a>
+          <a href={'IsakSolheimCV.pdf'} download onClick={() => { if (window.innerWidth <= 800) { this.handleToggle() }}}><li style={otherColorStyle}>Resume</li></a>
         </ul>
       </nav>
     );
