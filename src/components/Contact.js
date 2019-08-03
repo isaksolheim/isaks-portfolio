@@ -1,14 +1,6 @@
 import React from 'react';
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      errors: []
-    }
-  }
-
   handleSubmit = (e) => {
     var email = document.getElementById('email').value;
     var text = document.getElementById('text').value;
@@ -23,7 +15,7 @@ class Contact extends React.Component {
       <div className="contact-wrapper">
         <section className="contact">
           <h1>Contact</h1>
-          <form onClick={this.handleSubmit} action="https://formspree.io/isak.m.h.s@gmail.com" method="POST">
+          <form onSubmit={this.handleSubmit} action="https://formspree.io/isak.m.h.s@gmail.com" method="POST">
             <label>Email</label>
             <input id="email" type="email" name="_replyto" placeholder="your@email.com" />
 
