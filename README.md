@@ -16,7 +16,7 @@ Installation:
 
 `npm install`  
 
-To Start React App:  
+Start App:  
 
 `npm start`  
 
