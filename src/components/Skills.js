@@ -72,6 +72,10 @@ function Skills() {
             <img src={'./images/linux.png'} alt="tux" />
             <p className="skills-card-text">Linux</p>
           </div>
+          <div className="skills-card">
+            <img src={'./images/jest.png'} alt="jest" />
+            <p className="skills-card-text">Jest</p>
+          </div>
         </div>
     </section>
   );
